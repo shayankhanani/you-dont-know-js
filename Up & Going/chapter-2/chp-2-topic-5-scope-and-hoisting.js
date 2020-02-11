@@ -6,6 +6,13 @@ function foo() {
     console.log( a ); // 3
     var a; // declaration is "hoisted" // to the top of `foo()`
 }
+console.log(a) // checking the value of a after the function is declaration and call
+
+if(a){
+    var a = "6";
+    console.log('if block', a); // 6
+}
+console.log('after if block', a) // 6 because if and other block statement doesnt block off the scope
 
 function nested() {
     var a = 1;
